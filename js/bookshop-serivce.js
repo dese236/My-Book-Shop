@@ -1,11 +1,5 @@
 'use strict'
-// var books = {
-//     id: gNextId++,
-//     bookName: '',
-//     price: 0,
-//     img: '',
-//     rating: 0,
-// }
+
 var gNextId;
 const PAGE_SIZE = 5
 var gCurrPage = 0;
@@ -30,7 +24,7 @@ function _creatBook(name, price) {
         id: gNextId++,
         name,
         price,
-        img: `./images/book${getRandomInteger(0,5)}.jfif`,
+        img: `./images/book${getRandomInteger(0,4)}.jfif`,
         rating: 0
     }
 }
@@ -121,10 +115,6 @@ function addBook(bookName, bookPrice) {
     gBooks.unshift(_creatBook(bookName, bookPrice))
     _saveBooksToStorage()
 }
-
-// function addBook(newName , newPrice){
-//     gBooks.push({id:gNextId++, bookname:newName , price:newPrice})
-// }
 
 function updateBook(bookId, newPrice) {
     gBooks.forEach(function (book) {
