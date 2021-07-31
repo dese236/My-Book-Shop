@@ -58,7 +58,7 @@ function onReadBook(bookId) {
     document.querySelector('.info').innerText = getLoremIpsum(50)
     document.querySelector('.modal').classList.toggle('hidden')
     document.querySelector('.rate').innerText = book.rating
-    var elBtns = document.querySelector('.main button')
+    var elBtns = document.querySelectorall('.main button')
     elBtns.foreach(function(btn){
         btn.disable=true
     })
