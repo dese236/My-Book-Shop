@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myBookShop</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()" background="images/library2.jpg">
+    <header>
+        <h2>My Book Shop</h2>
+        <h3>filter by :</h3>
+        <select class="sort" name="sort" onchange="onSetSort(this.value)">
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+        </select>
+    </header>
+    <section class="new-book">
+        <button class="add" onclick="onAddBook()">Add New Book</button>
+        <input class="input-name" name="bookname" type="text" placeholder="Enter Book Name" />
+        <input class="input-price" name="bookprice" type="number" placeholder="Enter Book Price" />
+    </section>
+    <section class="main">
+        <table class="booktable"></table>
+        <button class="previous" onclick="onPreviousPage()">&#60 &#60</button>
+        <div class="pages"></div>
+        <button class="next" onclick="onNextPage()">&#62 &#62</button>
+    </section>
+    <section class="modal hidden">
+        <img src="images/coverbook.jfif" alt="Book Image">
+        <div class="info"></div>
+        <div class="rating">
+            <h4>rating :</h4>
+            <button class="rate-up" onclick="onRateUp()">+</button>
+            <span class="rate"></span>
+            <button class="rate-down" onclick="onRateDown()">-</button>
+        </div>
+        <button class="close-modal" onclick="onCloseModal()">CLOSE</button>
+    </section>
+
+    <script src="js/util.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/bookshop-serivce.js"></script>
+    <script src="js/bookshop-controller.js"></script>
+</body>
+
+</html>
