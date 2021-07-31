@@ -30,7 +30,7 @@ function _creatBook(name, price) {
         id: gNextId++,
         name,
         price,
-        img: `images/book${getRandomInteger(0,5)}.jfif`,
+        img: `./images/book${getRandomInteger(0,5)}.jfif`,
         rating: 0
     }
 }
