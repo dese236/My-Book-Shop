@@ -55,13 +55,13 @@ function onUpdateBook(bookId) {
 function onReadBook(bookId) {
     var book = getBookById(bookId)
     document.querySelector('.modal img').src = book.img
-    document.querySelector('.info').innerText = getLoremIpsum(100)
+    document.querySelector('.info').innerText = getLoremIpsum(50)
     document.querySelector('.modal').classList.toggle('hidden')
     document.querySelector('.rate').innerText = book.rating
     var elBtns = document.querySelector('.main button')
-    // elBtns.foreach(function(btn){
-    //     btn.disable=true
-    // })
+    elBtns.foreach(function(btn){
+        btn.disable=true
+    })
     renderBooks()
 }
 
